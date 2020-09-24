@@ -10,10 +10,11 @@ namespace sv;
 function fundraising_meter_init( $atts ) {
 
     // Add script
-    wp_enqueue_script( 'sv-fundraising-meter', plugin_dir_url( __FILE__ ) . 'fundraising-meter.min.js', Array(), false, true );
+    wp_enqueue_script( 'sv-fundraising-meter', plugin_dir_url( __FILE__ ) . 'js/fundraising-meter.min.js', Array(), false, true );
 
     // Define Attributes
     $a = shortcode_atts( array(
+        'title' => '',
         'goal' => '',
         'raised' => '',
         'color' => '',
