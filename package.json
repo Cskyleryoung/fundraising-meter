@@ -1,0 +1,33 @@
+{
+  "name": "fundraising-meter",
+  "version": "1.0.0",
+  "description": "Simple fundraising meter taking data from HTML attributes.",
+  "main": "fundraising-meter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cskyleryoung/fundraising-meter.git"
+  },
+  "keywords": [
+    "Kindful",
+    "fundraising",
+    "meter",
+    "thermometer"
+  ],
+  "author": "C. Skyler Young",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/Cskyleryoung/fundraising-meter/issues"
+  },
+  "homepage": "https://github.com/Cskyleryoung/fundraising-meter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
