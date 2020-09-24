@@ -1,16 +1,16 @@
 <?php
 /*
- * Plugin Name: Kindful Fundraising Meter
+ * Plugin Name: Fundraising Meter
  * Author: C. Skyler Young
- * Description: Simple widget, displayed via shortcode, that displays a fundraising meter for public campaigns in Kindful.
+ * Description: Simple widget, displayed via shortcode, that displays a fundraising meter pulling data from HTML attributes.
  */
 
 namespace sv;
 
-function kindful_meter_init( $atts ) {
+function fundraising_meter_init( $atts ) {
 
     // Add script
-    wp_enqueue_script( 'sv-kindful-meter', plugin_dir_url( __FILE__ ) . 'fundraising-meter.min.js', Array(), false, true );
+    wp_enqueue_script( 'sv-fundraising-meter', plugin_dir_url( __FILE__ ) . 'fundraising-meter.min.js', Array(), false, true );
 
     // Define Attributes
     $a = shortcode_atts( array(
@@ -21,7 +21,7 @@ function kindful_meter_init( $atts ) {
         'width' => '',
 	), $atts );
 
-    $html = '<div id="kindful-meter"';
+    $html = '<div id="fundraising-meter"';
 
     foreach($a as $att => $val) {
         if ( ! empty($val) ) {
@@ -34,4 +34,4 @@ function kindful_meter_init( $atts ) {
 	return $html;
 }
 
-add_shortcode( 'kindful_meter', 'sv\kindful_meter_init' );
+add_shortcode( 'fundraising_meter', 'sv\fundraising_meter_init' );
